@@ -1,21 +1,16 @@
 {
-  "name": "nodebootstraper",
-  "version": "5.0.0",
-  "dependencies": {
-    "express": "*",
-    "pug": "*",
-    "stylus": "*",
-    "serve-favicon": "*",
-    "morgan": "*",
-    "body-parser": "*",
-    "method-override": "*"
-  },
-  "engines": {
-    "node": "*",
-    "npm": "*"
-  },
+  "name": "express-test",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "openai": "^4.56.0"
   }
 }
