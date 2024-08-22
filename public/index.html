@@ -6,86 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express.js Server</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/chatbot.less.css">
+    <link rel="stylesheet" href="style/chatbot-loader.less.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@400;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <script src="./src/lib/anime.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./src/support.js"></script>
 
 </head>
 <body>
     <header>
         <div class="header-container" id="header-container">
-            <span class="material-symbols-outlined">arrow_back</span>
-            <h2>Student Helper Bot</h2>
+            <span class="material-symbols-outlined header-return-button" id="header-return-button">arrow_back</span>
+            <h2>ObsidianAI</h2>
         </div>
+        
     </header>
-    <div class="home" id="home">
-        <button id="Mental Health">
+    <div id="page-container">
+      <div id="home-page-container" class="page">
+       <div id="home-page">
+         
+         <div class="page-item">
+           
+           <h1>Welcome</h1>
+           <p>To Obsidian AI, a chat bot helper for CUNY students for the CUNY Tech Prep Hackathon.</p>
+           
+           <div id="home-page-blob-animation"></div>
+           
+         </div>
+         
+        <button model-type="mental-health" class="home-button">
             <span class="bold-text">Mental Health</span>
             <span class="light-text">Access a range of resources and support for maintaining and improving mental health and well-being.</span>
         </button>
-        <button id="Finding Activities">
+        <button model-type="activities" class="home-button">
             <span class="bold-text">Finding Activities</span>
             <span class="light-text">Discover activities and events tailored to your interests to help you stay active and engaged.</span>
         </button>
-        <button id="Resume Helper">
-            <span class="bold-text">Resume Helper</span>
-            <span class="light-text">Get guidance and tips on creating a polished resume that highlights your skills and experiences.</span>
-        </button>
-        <button id="Summarization Tool">
+        <button model-type="summarization" class="home-button">
             <span class="bold-text">Summarization Tool</span>
             <span class="light-text">Quickly summarize long texts to extract key information and insights.</span>
         </button>
-        <button id="CUNY FAQ">
+        <button model-type="cuny-faq" class="home-button">
             <span class="bold-text">CUNY FAQ</span>
             <span class="light-text">Find answers to common questions about the CUNY system.</span>
         </button>
+        
+        
+         <div class="page-item">
+           
+           <p>This was made by Fedy, Nur, FengSheng and Jessica.</p>
+           
+         </div>
+        
     </div>
-    <div class="chatbot" id="chatbot">
-        <ul class="chatbox">
-            <li class="chat incoming">
-                <span class="material-symbols-outlined">smart_toy</span>
-                <p>How can I help? </p>
-            </li>
-            <li class="chat outgoing">
-                <p>Lorem ipsum</p>
-            </li>
-         </ul>
-         <div class="chat-input">
+    </div>
+    <div class="page" id="chatbot-page">
+        <div class="page-item">
+          <h1 id="chatbot-page-title">Mental Health</h1>
+          <p>What do you want to ask the chat bot?</p>
+        </div>
+        
+        
+        <div class="chatbot-page-result-container" id="chatbot-page-result-container">
+          
+        </div>
+      
+        <div class="chatbot-page-textarea-container" id="chatbot-page-textarea-container">
+          <textarea id="chatbot-page-input"></textarea>
+          <button id="chatbot-page-send"> <span id="send-btn" class="material-symbols-outlined" style="color: white;     font-size: 33px;     text-align: center;     margin: 0;">send</span></button>
+        </div>
+        
+        <!--<ul class="chatbox">
+          <li class="chat">
+              <span class="material-symbols-outlined">smart_toy</span>
+              <p>How can I help? </p>
+          </li>
+          <li class="chat">
+              <p>Lorem ipsum</p>
+          </li>
+         </ul>-->
+        <!-- <div class="chat-input">
             <textarea placeholder="Enter message..." required></textarea>
-            <span id="send-btn" class="material-symbols-outlined">send</span>
+            
+        </div>-->
         </div>
-        </div>
-    <script>
-        var button = document.getElementById("Mental Health")
-        button.onclick = function(){
-            document.getElementById("chatbot").style.display = "block";
-            document.getElementById("home").style.display = "none";
-            
-        }
-        var button = document.getElementById("Finding Activities")
-        button.onclick = function(){
-            document.getElementById("chatbot").style.display = "block";
-            document.getElementById("home").style.display = "none";
-            
-        }
-        var button = document.getElementById("Resume Helper")
-        button.onclick = function(){
-            document.getElementById("chatbot").style.display = "block";
-            document.getElementById("home").style.display = "none";
-            
-        }
-        var button = document.getElementById("Summarization Tool")
-        button.onclick = function(){
-            document.getElementById("chatbot").style.display = "block";
-            document.getElementById("home").style.display = "none";
-            
-        }
-        var button = document.getElementById("CUNY FAQ")
-        button.onclick = function(){
-            document.getElementById("chatbot").style.display = "block";
-            document.getElementById("home").style.display = "none";
-            
-        }
-
-    </script>
+    </div>
+   
+    <script src="./main.js"></script>
+    <script src="./src/blob.js"></script>
+    <script src="./src/ui.js"></script>
 </body>
 </html>

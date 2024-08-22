@@ -2,9 +2,10 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #cbf0fa;
+  background-color: #77defa;
   margin: 0;
     padding: 0;
+    overflow: hidden !important;
 }
 
 h1 {
@@ -13,53 +14,108 @@ h1 {
   color: #333;
 }
 
+#home-page-blob-animation {
+  max-width: 400px;
+  width: 80%;
+  margin: auto;
+  
+}
+
+#home-page-blob-animation svg path {
+  fill: white !important;
+}
+
 p {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   color: #ffffff;
 }
 
-.chatbot {
-    /*right: 40px;
-    bottom: 100px;
-    width: 420px;
-    position: fixed;*/
+.page-item {
+  margin: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.page-item h1 {
+  color: #ffffff;
+}
+
+.page {
+  width: 100%;
+  /*max-width: 800px;*/
+  /*margin: 16px auto;*/
+  padding-top: 90px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+#home-page-container {
+  /*height: 100%;*/
+  overflow: scroll;
+}
+
+#page-container {
+  width: 200% !important;
+  display: flex;
+  position: fixed;
+  transition: 0.3s left;
+  left: 0;
+  /* left: -100%; */
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  margin: 0 !important;
+}
+
+/*#chatbot-page {
     background: #edf8f9;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 100%; 
-    max-width: 800px;
-    margin: 16px auto;
+   height: 100px;
  
+}*/
+
+header #header-return-button {
+  width: 0;
+  transition: 0.3s width;
+  overflow: hidden;
+  color: white;
+  margin-right: 16px;
 }
 
-#chatbot{
-    display: none;
+#chatbot-page{
+    /*display: none;*/
+     
 }
 
 header{
     -webkit-backdrop-filter: saturate(180%) blur(8px);
     backdrop-filter: saturate(180%) blur(8px);
-    background: #0187ca7b;
     padding: 1px 0;
     text-align: center;
     width: 100%; /* Ensures the header spans the entire width */
     position: sticky;
     top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #0471a89b;
+    background: #0187ca7b;
+    
 }
 
 header h2{
     color: #fff;
     font-size: 1.4rem;
     font-weight: 550;
-    margin: 8px 10px 7px 220px;
+    /*margin: 8px 10px 7px 220px;*/
     position: center;
+    margin: 0;
 }
 
 header div {
     max-width: 800px;
-    margin: 16px auto;
+    margin: auto;
     width: 100%;
 }
 
@@ -74,39 +130,56 @@ header div {
     font-size: 24px; /* Adjust size as needed */
     margin-right: 10px;
 }
-.home {
+#home-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Adds space between buttons */
-    margin-top: 90px;
+    gap: 20px; 
 }
 
-.home button {
+#home-page .home-button:active {
+  transform: scale(0.9);
+}
+
+#home-page .home-button:hover {
+  opacity: 1;
+  transform: scale(1.025);
+}
+
+#home-page .home-button {
     display: block;
-    width: 45%; /* Adjust width as needed */
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px;
     height: 130px;
     font-size: 1.1rem;
-    background-color: #0187ca;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 16px;
     cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1);
+    transition: 0.5s opacity, 0.3s transform;
+    
+    box-shadow: inset 0 1px rgba(85, 166, 246, 0.4);
+    color: #F0F7FF;
+    background: #0959AA;
+    background-image: linear-gradient(to bottom, #0A66C2, #064079);
+    outline: 1px solid #033363;
 }
 
-.home .bold-text {
+#home-page .bold-text {
     font-weight: 600; /* Bold */
     display: block;
 }
 
-.home .light-text {
-    font-weight: 400; /* Regular weight */
+#home-page .light-text {
+    font-weight: 400; 
     color: rgba(255, 255, 255, 0.6); /* Light color */
     margin-top: 5px;
     display: block;
 }
 
-.chatbot .chatbox{
+/*#chatbot-page .chatbox{
     height: 500px;
     overflow-y: auto;
     padding: 30px 0;
@@ -115,10 +188,10 @@ header div {
 
 .chatbox .chat {
     display: flex;
-}
+}*/
 
 /* for bot icon (incoming)*/
-.chatbox .incoming span {
+/*#chatbot-page .chatbox .incoming span {
     height: 32px;
     width: 32px;
     color: #fff;
@@ -130,7 +203,7 @@ header div {
     margin: 0 10px 7px 0;
 }
 
-.chatbox .chat p{
+#chatbot-page .chatbox .chat p{
     color: #fff;
     background: #0187ca;
     max-width: 75%;
@@ -140,24 +213,24 @@ header div {
 
 }
 
-.chatbox .outgoing {
+#chatbot-page .chatbox .outgoing {
     margin: 20px 0;
     justify-content: flex-end;
 }
 
-.chat .outgoing {
+#chatbot-page .chat .outgoing {
     margin: 20px 0;
     justify-content: flex-end;
     border-radius: 10px 10px 10px 0;
 }
 
-.chatbox .incoming p{
+#chatbot-page .chatbox .incoming p{
     color: #333;
     background: #ffffff;
     border-radius: 10px 10px 10px 0;
 }
-/*text box area*/
-.chatbot .chat-input {
+
+#chatbot-page .chatbot .chat-input {
     
     bottom: 0;
     width: 100%;
@@ -168,25 +241,23 @@ header div {
     border-top: 1px solid #c4c3c3;
 }
 
-.chat-input textarea {
+#chatbot-page .chat-input textarea {
     border: none;
     width: 85%;
     outline: none;
     height: 55px;
     resize: none;
     font-size: 0.95rem;
-    font-family: 'Poppins', sans-serif; /* Ensure Poppins font is applied */
+    font-family: 'Poppins', sans-serif;
 
 }
 
-/*makes send putton invisible when no input*/
-.chat-input span{
+#chatbot-page .chat-input span{
     cursor: pointer;
     visibility: hidden;
-}
+}*/
 
-/*allows send button to be visible AFTER msg input*/
-.chat-input textarea:valid ~ span {
+#chatbot-page .chat-input textarea:valid ~ span {
     visibility: visible;
 }
 
