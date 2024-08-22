@@ -5,12 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express.js Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Client-Server Communication</h1>
-    <textarea id="input"></textarea>
-    <button onclick="getMessage()">Get Message from Server</button>
-    <p id="message"></p>
-    <script src="main.js"></script>
+    <header>
+        <div class="header-container" id="header-container">
+            <span class="material-symbols-outlined">arrow_back</span>
+            <h2>Student Helper Bot</h2>
+        </div>
+    </header>
+    <div class="home" id="home">
+        <button id="Mental Health">
+            <span class="bold-text">Mental Health</span>
+            <span class="light-text">Access a range of resources and support for maintaining and improving mental health and well-being.</span>
+        </button>
+        <button id="Finding Activities">
+            <span class="bold-text">Finding Activities</span>
+            <span class="light-text">Discover activities and events tailored to your interests to help you stay active and engaged.</span>
+        </button>
+        <button id="Resume Helper">
+            <span class="bold-text">Resume Helper</span>
+            <span class="light-text">Get guidance and tips on creating a polished resume that highlights your skills and experiences.</span>
+        </button>
+        <button id="Summarization Tool">
+            <span class="bold-text">Summarization Tool</span>
+            <span class="light-text">Quickly summarize long texts to extract key information and insights.</span>
+        </button>
+        <button id="CUNY FAQ">
+            <span class="bold-text">CUNY FAQ</span>
+            <span class="light-text">Find answers to common questions about the CUNY system.</span>
+        </button>
+    </div>
+    <div class="chatbot" id="chatbot">
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>How can I help? </p>
+            </li>
+            <li class="chat outgoing">
+                <p>Lorem ipsum</p>
+            </li>
+         </ul>
+         <div class="chat-input">
+            <textarea placeholder="Enter message..." required></textarea>
+            <span id="send-btn" class="material-symbols-outlined">send</span>
+        </div>
+        </div>
+    <script>
+        var button = document.getElementById("Mental Health")
+        button.onclick = function(){
+            document.getElementById("chatbot").style.display = "block";
+            document.getElementById("home").style.display = "none";
+            
+        }
+        var button = document.getElementById("Finding Activities")
+        button.onclick = function(){
+            document.getElementById("chatbot").style.display = "block";
+            document.getElementById("home").style.display = "none";
+            
+        }
+        var button = document.getElementById("Resume Helper")
+        button.onclick = function(){
+            document.getElementById("chatbot").style.display = "block";
+            document.getElementById("home").style.display = "none";
+            
+        }
+        var button = document.getElementById("Summarization Tool")
+        button.onclick = function(){
+            document.getElementById("chatbot").style.display = "block";
+            document.getElementById("home").style.display = "none";
+            
+        }
+        var button = document.getElementById("CUNY FAQ")
+        button.onclick = function(){
+            document.getElementById("chatbot").style.display = "block";
+            document.getElementById("home").style.display = "none";
+            
+        }
+
+    </script>
 </body>
 </html>
