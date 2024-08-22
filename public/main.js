@@ -39,10 +39,35 @@ Obsidian.Message = function(model, message){
  * @method sendMessage - a function to send the message
  * @param {Obsidian.Message} message - // body: JSON.stringify({ username: "example" }),
  */
-Obsidian.send = function(message) {};
+Obsidian.send = function(message) {
+  
+  
+  
+};
 
-async function getMessage() {
-  const response = await fetch('/api/message');
-  const data = await response.json();
-  document.getElementById('message').innerText = data.message;
+function getMessage() {
+
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+
+  fetch("/api/message", {
+    method: "POST",
+    body: JSON.stringify({ message: document.getElementById('input').value }),
+    header: myHeaders
+    // ...
+  }).then( e => {
+    
+    console.log(e);
+    
+    return e.json();
+    
+  }).then( e => {
+  
+      console.log(e);
+      
+      document.getElementById('message').innerText = "Received!";
+  });/**/
+
+  
 }
