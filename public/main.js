@@ -9,14 +9,19 @@ var Obsidian = {};
  * @static Obsidian
  * @property {[String]} modelIds - the ids of all the models
  */
-Obsidian.modelIds = [];
+Obsidian.modelIds = [
+  "mental-health",
+  "summarization",
+  "cuny-faq",
+  "activities"
+];
 
 /**
  * @static Obsidian
  * @enum MessageType - the message type that is being sent
  */
 Obsidian.MessageType = {
-  AI: "bot",
+  AI: "assistant",
   User: "user"
 };
 
