@@ -45,7 +45,27 @@ Obsidian.send = function(message) {
   
 };
 
-function getMessage() {
+async function getMessage() {
+  
+  const message = document.getElementById('input').value;
+  
+  const response = await fetch('/api/message', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ 
+      message
+    
+    })
+  });
+  const data = await response.json();
+  console.log(data);
+  document.getElementById('message').innerText = "Received!";
+  console.log(data.status);
+}
+
+/*function getMessage() {
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
@@ -53,7 +73,7 @@ function getMessage() {
 
   fetch("/api/message", {
     method: "POST",
-    body: JSON.stringify({ message: document.getElementById('input').value }),
+    body: { message: document.getElementById('input').value },
     header: myHeaders
     // ...
   }).then( e => {
@@ -67,7 +87,7 @@ function getMessage() {
       console.log(e);
       
       document.getElementById('message').innerText = "Received!";
-  });/**/
+  });
 
   
-}
+}*/
