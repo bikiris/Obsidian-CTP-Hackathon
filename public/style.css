@@ -3,6 +3,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #cbf0fa;
+  margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -32,24 +34,83 @@ p {
  
 }
 
-.chatbot header{
-    background: #0187ca;
-    padding: 1px 0;
-    text-align: center;
-    
+#chatbot{
+    display: none;
 }
 
-.chatbot header h2{
+header{
+    -webkit-backdrop-filter: saturate(180%) blur(8px);
+    backdrop-filter: saturate(180%) blur(8px);
+    background: #0187ca7b;
+    padding: 1px 0;
+    text-align: center;
+    width: 100%; /* Ensures the header spans the entire width */
+    position: sticky;
+    top: 0;
+}
+
+header h2{
     color: #fff;
     font-size: 1.4rem;
     font-weight: 550;
-    margin: 8px 10px 7px 0;
+    margin: 8px 10px 7px 220px;
+    position: center;
+}
+
+header div {
+    max-width: 800px;
+    margin: 16px auto;
+    width: 100%;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-container .arrow-icon {
+    color: white; /* Override the global color */
+    font-size: 24px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adds space between buttons */
+    margin-top: 90px;
+}
+
+.home button {
+    display: block;
+    width: 45%; /* Adjust width as needed */
+    height: 130px;
+    font-size: 1.1rem;
+    background-color: #0187ca;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.home .bold-text {
+    font-weight: 600; /* Bold */
+    display: block;
+}
+
+.home .light-text {
+    font-weight: 400; /* Regular weight */
+    color: rgba(255, 255, 255, 0.6); /* Light color */
+    margin-top: 5px;
+    display: block;
 }
 
 .chatbot .chatbox{
-    height: 350px;
+    height: 500px;
     overflow-y: auto;
-    padding: 30px;
+    padding: 30px 0;
+    width: 100%;
 }
 
 .chatbox .chat {
@@ -134,5 +195,3 @@ p {
     color: #1b1b1b;
     margin-right: 10px;
 }
-
-
