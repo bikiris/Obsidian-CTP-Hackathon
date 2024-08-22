@@ -11,9 +11,19 @@ app.use(express.static('public'));
 
 app.use('/api/response', require('./Router/openaiRouter'));
 
+app.options('*', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Add other headers here
+  res.setHeader('Access-Control-Allow-Methods', 'POST'); // Add other methods here
+  res.send();
+});
+
 // Defining a route for handling client communication
-app.get('/api/message', (req, res) => {
+app.post('/api/message', (req, res) => {
     const message = 'Hello Geek. This Message is From Server';
+    console.log(req);
+    console.log(req.body.message); // undefined
+    // req.body = {}
     console.log(message);
     res.json({ message });
 });
