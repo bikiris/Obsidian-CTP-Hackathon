@@ -53,7 +53,7 @@ We integrated OpenAI API into a frontend chatbot to provide CUNY resources to st
 
 ## Videos:
 
-[![Video](.github/img.png)](https://github.com/bikiris/Obsidian-CTP-Hackathon/raw/main/.github/480p.mov)
+[![Video](.github/img.png)](https://github.com/bikiris/Obsidian-CTP-Hackathon/raw/main/.github/480p.mov)]
 
 
 
