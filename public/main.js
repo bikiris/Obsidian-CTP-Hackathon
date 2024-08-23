@@ -43,7 +43,7 @@ Obsidian.messages = {};
  */
 Obsidian.Message = function(role, message){
   this.role = role;
-  this.message = message;
+  this.content = message;
 };
 
 /*
