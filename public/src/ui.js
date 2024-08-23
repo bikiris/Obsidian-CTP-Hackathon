@@ -116,7 +116,7 @@ sendButton.onclick = function(){
         
         var newOutEl = document.createElement("div");
         newOutEl.setAttribute("class", "chatbot-page-result-item chatbot-page-result-item-robot");
-        newOutEl.innerText = data.message;
+        newOutEl.innerText = data;
         
         
         

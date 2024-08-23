@@ -58,11 +58,11 @@ background-size: 100% 100%;
  */
 Obsidian.test = function(message, callback){
   
-  console.log("Obsidian.test:: Testing message to the backend")
+  console.log("Obsidian.test:: Testing message to the backend");
   
   Obsidian.currentModel = Obsidian.modelIds[0];
   
-  console.log("Obsidian.test:: Set the current model to " + Obsidian.currentModel)
+  console.log("Obsidian.test:: Set the current model to " + Obsidian.currentModel);
   
   
   console.log("Obsidian.test:: Sending message to server");
@@ -112,7 +112,7 @@ Obsidian.send = async function(message, callback) {
   console.log(data.status);
   
   
-  Obsidian.messages[Obsidian.currentModel].push(new Obsidian.Message("assistant", data.message));
+  Obsidian.messages[Obsidian.currentModel].push(new Obsidian.Message("assistant", data));
   // adds it to the model
   
   
