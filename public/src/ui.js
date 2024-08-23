@@ -71,17 +71,21 @@ function scrollTo(element) {
   
   // elem.scrollHeight
   
-  if (element.scrollTop >= element.scrollHeight) return;
+  // element.scrollTop = element.scrollHeight;
+  
+  if (element.scrollTop >= element.scrollHeight - 2) return;
+  
+  // var range = element.scrollHeight - element.scrollTop;
   
   setTimeout(function(){
     
     element.scrollTop += 0.5;
     
-    scrollTo(chatbotPageContainer);
+    // element.scrollTop = element.scrollTop;
     
-  }, 1000 / 30);
-  
-  // element.scrollTop += element.scrollHeight;
+    scrollTo(element);
+    
+  }, 1000 / 40);
   
 }
 
@@ -117,6 +121,7 @@ function scrollVerticalTickToPosition(currentPosition, targetPosition) {
 <div class="chatbot-page-result-item" style="width: calc(100% - 38px); opacity: 1; margin: 8px;">Can you give me a summary of 911</div><div class="chatbot-page-result-item chatbot-page-result-item-robot" style="width: calc(100% - 38px); opacity: 1; margin: 8px;">Hello Geek. This Message is From Server</div>
 
 */
+
 
 sendButton.onclick = function(){
   
@@ -162,10 +167,12 @@ sendButton.onclick = function(){
         document.getElementById("chatbot-page-result-item-loader").style.opacity = 0;
         // removes the element
         
+        document.getElementById("chatbot-page-textarea-container").style.height = "45px";
         
         var newOutEl = document.createElement("div");
         newOutEl.setAttribute("class", "chatbot-page-result-item chatbot-page-result-item-robot");
         newOutEl.innerText = data;
+        
         
         
         
@@ -198,5 +205,28 @@ sendButton.onclick = function(){
   console.log("print")
   
 };
+
+
+inputTextEl.onkeypress = function(e){
   
+  if (!e.shiftKey && e.key === 'Enter') {
+    
+    sendButton.onclick();
+    
+  }
+  
+};
+
+inputTextEl.onkeydown = inputTextEl.onkeyup = function(e){
+  
+  document.getElementById("chatbot-page-textarea-container").style.height = (Math.min(3, inputTextEl.value.split("\n").length) * 45).toString() + "px";
+  
+  console.log(e.shiftKey);
+  
+  
+  
+  
+};
+
+
 })();

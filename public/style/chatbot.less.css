@@ -15,8 +15,9 @@
   opacity: 0.8;
   margin: auto;
   margin-bottom: 32px;
+  transition: 0.3s height;
 }
-/* line 23, input */
+/* line 25, input */
 .chatbot-page-textarea-container {
   /*position: relative;
   bottom: 50px;*/
@@ -42,7 +43,7 @@
   transform: translateX(-50%);
   */
 }
-/* line 58, input */
+/* line 60, input */
 .chatbot-page-textarea-container textarea {
   background-color: transparent;
   color: inherit;
@@ -54,16 +55,16 @@
   /*margin: 22px 12px;*/
   margin: 8px;
 }
-/* line 70, input */
+/* line 72, input */
 .chatbot-page-textarea-container button:hover {
   opacity: 0.8;
   box-shadow: 0 0 0 1px rgba(85, 166, 246, 0.2);
 }
-/* line 75, input */
+/* line 77, input */
 .chatbot-page-textarea-container button:active {
   transform: scale(0.7);
 }
-/* line 79, input */
+/* line 81, input */
 .chatbot-page-textarea-container button {
   box-shadow: inset 0 1px rgba(85, 166, 246, 0.4);
   color: #F0F7FF;
@@ -80,19 +81,19 @@
   transform: scale(1);
   width: 80px;
 }
-/* line 97, input */
+/* line 99, input */
 .chatbot-page-textarea-container textarea:focus {
   outline-width: 0;
 }
-/* line 101, input */
+/* line 103, input */
 .chatbot-page-textarea-container:hover {
   background-color: #0187caaa;
 }
-/* line 105, input */
+/* line 107, input */
 .chatbot-page-textarea-container:focus {
   background-color: #0187caff;
 }
-/* line 109, input */
+/* line 111, input */
 .chatbot-page-result-container {
   position: relative;
   top: 50px;
@@ -104,15 +105,15 @@
   /*overflow: scroll;*/
   padding-bottom: 32px;
 }
-/* line 120, input */
+/* line 122, input */
 .chatbot-page-result-container .chatbot-page-result-item:hover {
   background-color: #0187ca;
 }
-/* line 124, input */
+/* line 126, input */
 .chatbot-page-result-container .chatbot-page-result-item-robot {
   background: #4991b57b !important;
 }
-/* line 128, input */
+/* line 130, input */
 .chatbot-page-result-container .chatbot-page-result-item {
   color: white;
   border: 1px solid #0471a89b;
@@ -133,7 +134,7 @@
   display: flex;
   justify-content: space-between;
 }
-/* line 153, input */
+/* line 155, input */
 .chatbot-page-result-container .chatbot-page-result-loading {
   display: flex;
   color: white;
