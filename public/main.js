@@ -46,6 +46,39 @@ Obsidian.Message = function(role, message){
   this.message = message;
 };
 
+/*
+background-size: 100% 100%;
+
+*/
+
+/**
+ * @class Obsidian
+ * @method test - a function to test the message
+ * @param {Obsidian.Message} message - // body: JSON.stringify({ username: "example" }),
+ */
+Obsidian.test = function(message, callback){
+  
+  console.log("Obsidian.test:: Testing message to the backend")
+  
+  Obsidian.currentModel = Obsidian.modelIds[0];
+  
+  console.log("Obsidian.test:: Set the current model to " + Obsidian.currentModel)
+  
+  
+  console.log("Obsidian.test:: Sending message to server");
+  
+  Obsidian.send(message, (data)=>{
+    
+    console.log("Obsidian.test:: Received message to server");
+    
+    console.log(data);
+    
+    callback(data);
+    
+  });
+  
+};
+
 /**
  * @class Obsidian
  * @method sendMessage - a function to send the message
@@ -89,4 +122,10 @@ Obsidian.send = async function(message, callback) {
   
   callback(data);
   
+<<<<<<< HEAD
 };
+=======
+  
+};
+
+>>>>>>> 1080d64 (Added a test function)
