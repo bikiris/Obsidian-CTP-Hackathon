@@ -46,10 +46,12 @@ Obsidian.Message = function(role, message){
   this.content = message;
 };
 
-/*
-background-size: 100% 100%;
-
-*/
+Obsidian.modelSystemPrompt = {
+  "cuny-faq": "You’re an assistant for a student of a City University of New York, that will answer questions.",
+  "mental-health" : "You’re an assistant for a student of a City University of New York, that will answer questions.",
+  "activities" : "You’re an assistant for a student of a City University of New York, that will answer questions.",
+  "summarization" : "You are a summarization expert, you will provide the summary to the texts you receive."
+}
 
 /**
  * @class Obsidian
@@ -97,17 +99,11 @@ Obsidian.send = async function(message, callback) {
     Obsidian.messages[Obsidian.currentModel] = [];
     // if there's no model data, it creates it
     
-    Obsidian.messages[Obsidian.currentModel].push(new Obsidian.Message("system", ''));
-    
-    
+    Obsidian.messages[Obsidian.currentModel].push(new Obsidian.Message("system", Obsidian.modelSystemPrompt[Obsidian.currentModel]));
+    // adds it to the model
   }
-  
+
   Obsidian.messages[Obsidian.currentModel].push(new Obsidian.Message("user", message));
-  // adds it to the model
-  
-  // const message = document.getElementById('input').value;
-  
-  const mes = 'a';
   
   var data = {};
   
@@ -119,13 +115,11 @@ Obsidian.send = async function(message, callback) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ 
-        model: Obsidian.currentModel,
         messages: Obsidian.messages[Obsidian.currentModel]
       })
     });
     data = await response.json();
     console.log(data);
-    // document.getElementById('message').innerText = "Received!";
     console.log(data.status);
     
   } else {

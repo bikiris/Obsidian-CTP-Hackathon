@@ -22,7 +22,7 @@ app.post('/api/message', async (req, res) => {
   try {
     const { getAiResponse } = require('./Service/openaiService');
     console.log("received message");
-    const message = await getAiResponse(req.body.model, req.body.messages);
+    const message = await getAiResponse(req.body.messages);
     console.log("got response");
     console.log(message);
     res.json( message );

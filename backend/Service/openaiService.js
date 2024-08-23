@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 //we need to get the messages from frontend
-const getAiResponse = async (model, message) => {
+const getAiResponse = async (message) => {
   //send the message to openai and retrieve ai response, send it back to frontend
   const response = await chatCompletion(message);
   return response;
