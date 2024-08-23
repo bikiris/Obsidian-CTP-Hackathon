@@ -1,15 +1,15 @@
 const express = require('express');
 const cors = require('cors');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 const app = express();
 
 app.use(cors());
+app.use(express.json());
 
 // Serving static files (HTML, CSS, JS)
 app.use(express.static('public'));
 
-app.use('/api/response', require('./Router/openaiRouter'));
 
 app.options('*', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -19,13 +19,18 @@ app.options('*', (req, res) => {
 });
 
 // Defining a route for handling client communication
-app.post('/api/message', (req, res) => {
-    const message = 'Hello Geek. This Message is From Server';
-    console.log(req);
-    console.log(req.body.message); // undefined
-    // req.body = {}
+app.post('/api/message', async (req, res) => {
+  try {
+    const { getAiResponse } = require('./Service/openaiService');
+    console.log("received message");
+    const message = await getAiResponse(req.body.model, req.body.messages);
+    console.log("got response");
     console.log(message);
-    res.json({ message });
+    res.json( message );
+  }catch (error) {
+    console.log(error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 

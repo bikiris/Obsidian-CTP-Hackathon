@@ -61,15 +61,20 @@ Obsidian.send = async function(message, callback) {
   
   // const message = document.getElementById('input').value;
   
-  const response = await fetch('/api/message', {
+  const mes = 'a';
+
+  const response = await fetch('http://localhost:8000/api/message', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ 
       model: Obsidian.currentModel,
-      messages: Obsidian.messages[Obsidian.currentModel]
-    
+      // messages: Obsidian.messages[Obsidian.currentModel]
+    messages: [{
+      role: "user",
+      content: mes
+    }]
     })
   });
   const data = await response.json();
@@ -84,52 +89,4 @@ Obsidian.send = async function(message, callback) {
   
   callback(data);
   
-  
 };
-
-/*async function getMessage() {
-  
-  const message = document.getElementById('input').value;
-  
-  const response = await fetch('/api/message', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ 
-      message
-    
-    })
-  });
-  const data = await response.json();
-  console.log(data);
-  document.getElementById('message').innerText = "Received!";
-  console.log(data.status);
-}
-*/
-/*function getMessage() {
-
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-
-
-  fetch("/api/message", {
-    method: "POST",
-    body: { message: document.getElementById('input').value },
-    header: myHeaders
-    // ...
-  }).then( e => {
-    
-    console.log(e);
-    
-    return e.json();
-    
-  }).then( e => {
-  
-      console.log(e);
-      
-      document.getElementById('message').innerText = "Received!";
-  });
-
-  
-}*/

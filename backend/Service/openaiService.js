@@ -1,4 +1,6 @@
-import OpenAI from 'openai';
+const OpenAI = require('openai');
+const dotenv = require('dotenv');
+dotenv.config();
 
 //we need to get the messages from frontend
 const getAiResponse = async (model, message) => {
@@ -14,8 +16,8 @@ const chatCompletion = async (message) => {
       model: 'gpt-4o-mini',
       messages: message
   });
-
-  return completion.data.choices[0].message.content;
+  console.log(completion)
+  return completion.choices[0].message.content;
 }
 
 //return the message
