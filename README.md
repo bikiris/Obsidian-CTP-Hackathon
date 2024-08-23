@@ -51,6 +51,10 @@ We integrated OpenAI API into a frontend chatbot to provide CUNY resources to st
 
 ![Image](.github/img.png)
 
+## Videos:
+
+![Image](.github/480p.mov)
+
 ## License:
 This project is licensed under Apache 2.0. See [Liscense](/LICENSE) for more details.
 
