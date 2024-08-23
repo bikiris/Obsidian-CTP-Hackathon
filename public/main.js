@@ -103,11 +103,7 @@ Obsidian.send = async function(message, callback) {
     },
     body: JSON.stringify({ 
       model: Obsidian.currentModel,
-      // messages: Obsidian.messages[Obsidian.currentModel]
-    messages: [{
-      role: "user",
-      content: mes
-    }]
+      messages: Obsidian.messages[Obsidian.currentModel]
     })
   });
   const data = await response.json();
@@ -122,10 +118,4 @@ Obsidian.send = async function(message, callback) {
   
   callback(data);
   
-<<<<<<< HEAD
 };
-=======
-  
-};
-
->>>>>>> 1080d64 (Added a test function)
