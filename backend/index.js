@@ -1,12 +1,15 @@
-// server.js
 const express = require('express');
-const app = express();
-const port = 8000;
+const cors = require('cors');
+const port = process.env.PORT || 3000;
 
+const app = express();
+
+app.use(cors());
 
 // Serving static files (HTML, CSS, JS)
-app.use(express.json());
 app.use(express.static('public'));
+
+app.use('/api/response', require('./Router/openaiRouter'));
 
 app.options('*', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -24,6 +27,7 @@ app.post('/api/message', (req, res) => {
     console.log(message);
     res.json({ message });
 });
+
 
 // Starting the server
 app.listen(port, () => {
