@@ -5,12 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express.js Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/chatbot.less.css">
+    <link rel="stylesheet" href="style/chatbot-loader.less.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <script src="./src/lib/anime.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./src/support.js"></script>
+
 </head>
 <body>
-    <h1>Client-Server Communication</h1>
-    <textarea id="input"></textarea>
-    <button onclick="getMessage()">Get Message from Server</button>
-    <p id="message"></p>
-    <script src="main.js"></script>
+    <header>
+        <div class="header-container" id="header-container">
+            <span class="material-symbols-outlined header-return-button" id="header-return-button">arrow_back</span>
+            <h2>ObsidianAI</h2>
+        </div>
+        
+    </header>
+    <div id="page-container">
+      <div id="home-page-container" class="page">
+       <div id="home-page">
+         
+         <div class="page-item">
+           
+           <h1>Welcome</h1>
+           <p>To Obsidian AI, a chat bot helper for CUNY students for the CUNY Tech Prep Hackathon, for solving daily inconveniences.</p>
+           
+           <div id="home-page-blob-animation"></div>
+           
+         </div>
+         
+        <button model-type="mental-health" class="home-button">
+            <span class="bold-text">Mental Health</span>
+            <span class="light-text">Access a range of resources and support for maintaining and improving mental health and well-being.</span>
+        </button>
+        <button model-type="activities" class="home-button">
+            <span class="bold-text">Finding Activities</span>
+            <span class="light-text">Discover activities and events tailored to your interests to help you stay active and engaged.</span>
+        </button>
+        <button model-type="summarization" class="home-button">
+            <span class="bold-text">Summarization Tool</span>
+            <span class="light-text">Quickly summarize long texts to extract key information and insights.</span>
+        </button>
+        <button model-type="cuny-faq" class="home-button">
+            <span class="bold-text">CUNY FAQ</span>
+            <span class="light-text">Find answers to common questions about the CUNY system.</span>
+        </button>
+        
+        
+         <div class="page-item">
+           
+           <p>This was made by Fedy, Nur, FengSheng and Jessica.</p>
+           
+         </div>
+        
+    </div>
+    </div>
+    <div class="page" id="chatbot-page">
+      
+        <div id="chatbot-page-container">
+        
+          <div class="page-item" style="padding-top: 64px;">
+            <h1 id="chatbot-page-title">Mental Health</h1>
+            <p>What do you want to ask the chat bot?</p>
+          </div>
+          
+          
+          <div class="chatbot-page-result-container" id="chatbot-page-result-container">
+            
+          </div>
+          
+        </div>
+      
+        <div class="chatbot-page-textarea-container" id="chatbot-page-textarea-container">
+          <textarea id="chatbot-page-input"></textarea>
+          <button id="chatbot-page-send"> <span id="send-btn" class="material-symbols-outlined" style="color: white;     font-size: 33px;     text-align: center;     margin: 0;">send</span></button>
+        </div>
+        
+        <!--<ul class="chatbox">
+          <li class="chat">
+              <span class="material-symbols-outlined">smart_toy</span>
+              <p>How can I help? </p>
+          </li>
+          <li class="chat">
+              <p>Lorem ipsum</p>
+          </li>
+         </ul>-->
+        <!-- <div class="chat-input">
+            <textarea placeholder="Enter message..." required></textarea>
+            
+        </div>-->
+        </div>
+    </div>
+   
+    <script src="./main.js"></script>
+    <script src="./src/blob.js"></script>
+    <script src="./src/ui.js"></script>
 </body>
 </html>
