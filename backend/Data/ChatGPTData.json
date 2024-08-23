@@ -1,0 +1,152 @@
+[{
+  "model": "cuny-faq",
+  "messages": [
+    {
+       "role": "system",
+       "content": "You’re an assistant for a student of a City University of New York, that will answer questions."
+    },
+    {
+      "role": "user",
+      "content": "What is CUNY?"
+    },
+    {
+      "role": "assistant",
+      "content": "CUNY, or the City University of New York, is a public university system in New York City. It is the largest urban university system in the United States, with 25 campuses spread across the city's five boroughs. CUNY offers a wide range of undergraduate, graduate, and professional degree programs. The university system is known for its diversity, affordability, and commitment to providing accessible education to all students, especially those from underrepresented or economically disadvantaged backgrounds."
+    }
+  ]
+},
+{
+    "model": "cuny-faq",
+    "messages": [
+      {
+         "role": "system",
+         "content": "You’re an assistant for a student of a City University of New York, that will answer questions."
+      },
+      {
+        "role": "user",
+        "content": "Does CUNY offer any online programs?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes, CUNY offers online programs. The City University of New York (CUNY) provides a variety of fully online degree programs and certificates at both undergraduate and graduate levels. These programs are designed to be flexible and accessible for students who may not be able to attend in-person classes. You can find programs in various fields, including business, education, health sciences, and more. If you’re interested in specific programs or need more details, you can visit the CUNY website or contact their admissions office."
+      }
+    ]
+  },
+  {
+    "model": "mental-health",
+    "messages": [
+      {
+         "role": "system",
+         "content": "You’re an assistant for a student of a City University of New York, that will answer questions."
+      },
+      {
+        "role": "user",
+        "content": "Can you list the location of the mental health services offices of the following schools: Brooklyn College, Baruch College, CCNY, City Tech, Queens College, Hunter College?"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the locations for mental health services offices at the listed CUNY schools: Brooklyn College Counseling Center: 1208 Ingersoll Hall, 2900 Bedford Avenue, Brooklyn, NY 11210. Baruch College Counseling Center:  55 Lexington Avenue, Box B7-220, New York, NY 10010. City College of New York (CCNY) Counseling Center: 160 Convent Avenue, NAC 6/220, New York, NY 10031. New York City College of Technology (City Tech) Counseling Services: 285 Jay Street, Namm Hall, Room 300, Brooklyn, NY 11201. Queens College Counseling and Wellness Services: 695 Park Avenue, East Building, Room E1418, New York, NY 10065. For the most accurate and up-to-date information, or to confirm office hours and services, it's best to visit each college’s official website or contact their respective mental health services offices directly."
+      }
+    ]
+    },
+    {
+        "model": "mental-health",
+        "messages": [
+      {
+         "role": "system",
+         "content": "You’re an assistant for a student of a City University of New York, that will answer questions."
+      },
+      {
+        "role": "user",
+        "content": "I am feeling anxious and overwhelmed from my finals. What can I do?"
+      },
+      {
+        "role": "assistant",
+        "content": "Feeling anxious and overwhelmed during finals is common, but there are several strategies you can use to help manage your stress: 1. Create a Study Schedule: Break down your study material into manageable chunks and create a schedule. Prioritize your tasks and stick to your plan. 2. Take Breaks: Regular breaks are essential for maintaining focus and preventing burnout. Use techniques like the Pomodoro Technique (25 minutes of studying followed by a 5-minute break). 3. Practice Relaxation Techniques: Deep breathing exercises, meditation, and mindfulness can help reduce anxiety. Apps like Headspace or Calm offer guided meditations. 4. Stay Organized: Keep your study space tidy and organized. Having a clear workspace can help you feel more in control and focused. 5. Exercise Regularly: Physical activity can help alleviate stress and improve your mood. Even a short walk or a quick workout can make a difference. 6. Get Enough Sleep: Prioritize getting a good night’s sleep. Avoid staying up too late studying, as lack of sleep can increase stress and reduce cognitive function. 7. Eat Healthily: Maintain a balanced diet and stay hydrated. Avoid excessive caffeine and sugary snacks. 8. Seek Support: Don’t hesitate to reach out to friends, family, or a counselor if you’re feeling overwhelmed. Many universities offer counseling services for students. 9. Stay Positive: Remind yourself that it’s normal to feel stressed, and that you’ve prepared as best as you can. Focus on positive self-talk and affirmations. 10. Stay Positive: Remind yourself that it’s normal to feel stressed, and that you’ve prepared as best as you can. Focus on positive self-talk and affirmations. Remember, it’s important to take care of yourself and find a balance between studying and relaxation."
+      }
+    ]
+    },
+    {
+        "model": "activities",
+        "messages": [
+          {
+             "role": "system",
+             "content": "You’re an assistant for a student of a City University of New York, that will answer questions."
+          },
+          {
+            "role": "user",
+            "content": "Can you provide a link to the clubs at Queens College?"
+          },
+          {
+            "role": "assistant",
+            "content": "For the most current information about clubs and organizations at Queens College, you can visit their official Student Life page or the Queens College website. Unfortunately, I can’t provide direct links, but you can follow these steps to find the information: Go to the Queens College website: www.qc.cuny.edu. Navigate to the “Student Life” or “Student Activities” section. Look for links related to student organizations or clubs. Alternatively, you can contact the Student Activities Office directly for assistance in finding a list of clubs and their details."
+          }
+        ]
+      }, {
+        "model": "activities",
+        "messages": [
+          {
+             "role": "system",
+             "content": "You’re an assistant for a student of a City University of New York, that will answer questions."
+          },
+          {
+            "role": "user",
+            "content": "What workshops are happening at CUNY in August?"
+          },
+          {
+            "role": "assistant",
+            "content": "In August, CUNY offers several workshops across different campuses. For example, at City Tech, there are math preparation workshops designed for students entering courses like Pre-Calculus, Calculus I, and II, running from August 19 to August 22. These workshops aim to strengthen students' understanding before starting their courses. At Hunter College, a variety of workshops are being held, including sessions on transitioning from Blackboard to Brightspace, enhancing course design with infographics, and integrating AI tools like ChatGPT for classroom use. There are also professional development sessions focusing on inclusive syllabus design and fostering positive classroom environments. These workshops are beneficial for both new and returning students, offering skill-building and academic preparation as the semester begins. For more details, you can check the specific campus offerings. "
+          }
+        ]
+      }, {
+        "model": "activities",
+        "messages": [
+          {
+             "role": "system",
+             "content": "You’re an assistant for a student of a City University of New York, that will answer questions."
+          },
+          {
+            "role": "user",
+            "content": "Can you provide a link to the clubs at Queens College?"
+          },
+          {
+            "role": "assistant",
+            "content": "For the most current information about clubs and organizations at Queens College, you can visit their official Student Life page or the Queens College website. Unfortunately, I can’t provide direct links, but you can follow these steps to find the information: Go to the Queens College website: www.qc.cuny.edu. Navigate to the “Student Life” or “Student Activities” section. Look for links related to student organizations or clubs. Alternatively, you can contact the Student Activities Office directly for assistance in finding a list of clubs and their details."
+          }
+        ]
+      }, {
+        "model": "summarization",
+        "messages": [
+          {
+             "role": "system",
+             "content": "Summarize the following text:"
+          },
+          {
+            "role": "user",
+            "content": "Rental. When I left my first marriage, I moved into a small rental house with my ten-year-old daughter. The floors creaked and the windows leaked and the oven door wouldn’t close—but I loved the place. It felt cozy and funky and just the right size for my downsized life. Then, after I’d lived there about six months, my landlord stopped by to tell me he had a buyer for the house. “But I like it here,” I said, “and I’m in the middle of a divorce.” Dan and I sat on the grass in the back yard and talked awhile and finally he stood up. “I went through a divorce,” he said. “I won’t sell the house.” I stayed for five years, and figured out how to keep the oven door closed with a hanger and a rubber band. Also how to be a single mom, a single woman. I grappled with guilt and grief and unintended consequences—losing extended family, people taking sides. A roller-coaster, a slog. And if something went wrong with the house, I called my landlord. When he had to retrieve my pantyhose from the bathtub drain, Dan laughed and said, “Not hard enough.” When the birds in the attic turned out to be a battery in the smoke detector, he said, “Not hard enough.” When a stray cat came to our back porch and my daughter wanted to keep it, he changed the rule about “No Pets.” After we moved out, Dan sold the house. I still drive by. There’s a stroller out front these days and a pot of red geraniums."
+          },
+          {
+            "role": "assistant",
+            "content": "The narrator reflects on their experience after leaving a marriage and moving into a small rental house with their daughter. Despite the house's imperfections, it felt like a cozy and fitting place for their new, downsized life. After six months, the landlord, Dan, informed the narrator that he had a buyer for the house. However, after learning about the narrator's divorce, he decided not to sell the house. Over the next five years, the narrator navigated the challenges of being a single mother and woman, finding solace in the support and flexibility provided by Dan. He allowed them to stay, helped with house issues, and even changed the rules to accommodate their needs. After they moved out, Dan eventually sold the house, but the narrator still drives by and notices signs of a new family living there."
+          }
+        ]
+      },{
+        "model": "summarization",
+        "messages": [
+          {
+             "role": "system",
+             "content": "Summarize the following text:"
+          },
+          {
+            "role": "user",
+            "content": "My Grandparents’ House. When I can’t sleep, I go back to my grandparents’ house and open the front door. There was no vestibule so you walked right into the living room. The coat closet had a stained glass window in blue and gold and violet. I know that place by heart and can still stand in each room and picture the furnishings: the Victorian couch, the console radio, the four-poster twin beds upstairs. As a child, I often stayed overnight and it was a refuge from the confusions of my own home—my mother’s sadness, my father’s rage. Before I went to sleep, Nanna sat on the edge of the bed in her long nightgown and we talked awhile. “Are you warm enough?” she’d ask. Looking back, I realize my grandparents’ house was modest in size but it seemed huge to me. Huge and calm and welcoming. In the living room, I sat beside Grandpa and listened to him read Longfellow’s poem, The Song of Hiawatha. I liked the way the words made music. In the dining room, our family gathered for special meals, using the good dishes from the big mahogany breakfront. Nanna always told the grandchildren, “Don’t eat any more than you want.” Which meant you could take an extra biscuit and not finish it. It meant you had permission to be yourself, something I didn’t feel anywhere else. Permission to sit on the floor of the coat closet in the dark and feel safe—watching the light come through the colored glass."
+          },
+          {
+            "role": "assistant",
+            "content": "The narrator reminisces about their grandparents' house, a place they mentally revisit when they can’t sleep. The house, though modest in size, felt enormous and comforting, offering a refuge from the turmoil of their own home. The narrator fondly recalls the details of the house, from the stained glass window in the coat closet to the Victorian furnishings and the calm, welcoming atmosphere. Nights spent there were peaceful, with their grandmother sitting on the edge of the bed, asking if they were warm enough. The house provided a sense of safety and permission to be themselves, something they didn’t feel elsewhere, especially in moments like sitting in the dark coat closet, feeling secure while watching light filter through the colored glass."
+          }
+        ]
+      }
+    ]
+
+    

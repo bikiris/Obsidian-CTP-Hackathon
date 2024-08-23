@@ -10,7 +10,6 @@ app.use(express.json());
 // Serving static files (HTML, CSS, JS)
 app.use(express.static('public'));
 
-
 app.options('*', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Add other headers here
