@@ -287,3 +287,27 @@ header div {
     color: #1b1b1b;
     margin-right: 10px;
 }
+
+
+::-webkit-scrollbar-track {
+  background: #0959AA00; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #064079; /* Color of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06407970; /* Color of the scrollbar thumb on hover */
+}
+
+/* Remove scrollbar buttons for WebKit-based browsers */
+::-webkit-scrollbar-button {
+  display: none; /* Hide the scrollbar buttons */
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: thin; /* Width of the scrollbar */
+  scrollbar-color: #064079 #0959AA00; /* Color of the scrollbar thumb and track */
+}
