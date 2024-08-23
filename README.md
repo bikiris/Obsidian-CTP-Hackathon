@@ -53,6 +53,8 @@ We integrated OpenAI API into a frontend chatbot to provide CUNY resources to st
 
 ## Videos:
 
+[![Video](.github/img.png)](.github/480p.mov)
+
 ![Image](.github/480p.mov)
 
 ## License:
