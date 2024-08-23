@@ -92,8 +92,15 @@ Obsidian.dummyServerText = "Hello world, from fake server.";
  */
 Obsidian.send = async function(message, callback) {
   
-  if (!Obsidian.messages[Obsidian.currentModel]) Obsidian.messages[Obsidian.currentModel] = [];
-  // if there's no model data, it creates it
+  if (!Obsidian.messages[Obsidian.currentModel]) {
+    
+    Obsidian.messages[Obsidian.currentModel] = [];
+    // if there's no model data, it creates it
+    
+    Obsidian.messages[Obsidian.currentModel].push(new Obsidian.Message("system", ''));
+    
+    
+  }
   
   Obsidian.messages[Obsidian.currentModel].push(new Obsidian.Message("user", message));
   // adds it to the model

@@ -10,6 +10,8 @@ body {
   (0x77defa + 0x0086a2).toString(16) + " " + (0x77defa + 0x05406d).toString(16)
   
   */
+  
+  
   background: linear-gradient(40deg, #4ebdd4, #0582e1);
   background-size: 100%;
   /*position: fixed;

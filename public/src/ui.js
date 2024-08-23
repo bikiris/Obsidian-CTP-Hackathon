@@ -28,6 +28,8 @@ function onClick(e){
       
       //console.log(message);
       
+      if (message.role == "system") continue;
+      
       var oldEl = document.createElement("div");
       oldEl.setAttribute("class", "chatbot-page-result-item" + (message.role == "user" ? " " : " chatbot-page-result-item-robot"));
       oldEl.setAttribute("style", "width: calc(100% - 38px); opacity: 1; margin: 8px;");
