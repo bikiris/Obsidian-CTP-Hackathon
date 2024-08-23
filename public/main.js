@@ -81,6 +81,12 @@ Obsidian.test = function(message, callback){
 
 /**
  * @class Obsidian
+ * @property {String} dummyServerText - sample text for dummy server test 
+ */
+Obsidian.dummyServerText = "Hello world, from fake server.";
+
+/**
+ * @class Obsidian
  * @method sendMessage - a function to send the message
  * @param {Obsidian.Message} message - // body: JSON.stringify({ username: "example" }),
  */
@@ -95,21 +101,31 @@ Obsidian.send = async function(message, callback) {
   // const message = document.getElementById('input').value;
   
   const mes = 'a';
-
-  const response = await fetch('http://localhost:8000/api/message', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ 
-      model: Obsidian.currentModel,
-      messages: Obsidian.messages[Obsidian.currentModel]
-    })
-  });
-  const data = await response.json();
-  console.log(data);
-  // document.getElementById('message').innerText = "Received!";
-  console.log(data.status);
+  
+  var data = {};
+  
+  if (!location.href.startsWith("file://")) {
+    
+    const response = await fetch('http://localhost:8000/api/message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ 
+        model: Obsidian.currentModel,
+        messages: Obsidian.messages[Obsidian.currentModel]
+      })
+    });
+    data = await response.json();
+    console.log(data);
+    // document.getElementById('message').innerText = "Received!";
+    console.log(data.status);
+    
+  } else {
+    
+    data = Obsidian.dummyServerText;
+    
+  }
   
   
   Obsidian.messages[Obsidian.currentModel].push(new Obsidian.Message("assistant", data));

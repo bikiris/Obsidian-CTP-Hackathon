@@ -31,7 +31,7 @@ function onClick(e){
       var oldEl = document.createElement("div");
       oldEl.setAttribute("class", "chatbot-page-result-item" + (message.role == "user" ? " " : " chatbot-page-result-item-robot"));
       oldEl.setAttribute("style", "width: calc(100% - 38px); opacity: 1; margin: 8px;");
-      oldEl.innerText = message.message;
+      oldEl.innerText = message.content;
       resEl.appendChild(oldEl);
       
       
@@ -62,6 +62,52 @@ document.getElementById("header-return-button").onclick = function(){
   
 };
 
+var chatbotPageContainer = document.getElementById('chatbot-page-container');
+  // elem.scrollTop = elem.scrollHeight;
+
+function scrollTo(element) {
+  
+  // elem.scrollHeight
+  
+  if (element.scrollTop >= element.scrollHeight) return;
+  
+  setTimeout(function(){
+    
+    element.scrollTop += 0.5;
+    
+    scrollTo(chatbotPageContainer);
+    
+  }, 1000 / 30);
+  
+  // element.scrollTop += element.scrollHeight;
+  
+}
+
+/*
+function scrollVerticalTickToPosition(currentPosition, targetPosition) {
+    var filter = 0.2;
+    var fps = 60;
+    var difference = parseFloat(targetPosition) - parseFloat(currentPosition);
+
+    // Snap, then stop if arrived.
+    var arrived = (Math.abs(difference) <= 0.5);
+    if (arrived)
+    {
+        // Apply target.
+        scrollTo(0.0, targetPosition);
+        return;
+    }
+
+    // Filtered position.
+    currentPosition = (parseFloat(currentPosition) * (1.0 - filter)) + (parseFloat(targetPosition) * filter);
+
+    // Apply target.
+    scrollTo(0.0, Math.round(currentPosition));
+
+    // Schedule next tick.
+    setTimeout(() => scrollVerticalTickToPosition(currentPosition, targetPosition), (1000 / fps));
+}
+*/
 
 
 /*
@@ -79,7 +125,7 @@ sendButton.onclick = function(){
   
   var inputText = inputTextEl.value;
   
-  console.log("print")
+  console.log("print");
   
   var newEl = document.createElement("div");
   newEl.setAttribute("class", "chatbot-page-result-item");
@@ -96,6 +142,7 @@ sendButton.onclick = function(){
   inputTextEl.value = "";
   
   resEl.appendChild(newEl);
+  
   
   
   setTimeout(function(){
@@ -121,6 +168,10 @@ sendButton.onclick = function(){
         
         
         resEl.appendChild(newOutEl);
+        
+        scrollTo(chatbotPageContainer);
+        
+        console.log(document.getElementById("chatbot-page-result-container").getBoundingClientRect());
         
         setTimeout(function(){
           
