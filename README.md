@@ -53,11 +53,8 @@ We integrated OpenAI API into a frontend chatbot to provide CUNY resources to st
 
 ## Videos:
 
-[![Video](.github/img.png)](https://github.com/bikiris/Obsidian-CTP-Hackathon/raw/main/.github/480p.mov)]
+[![Watch the video](https://github.com/bikiris/Obsidian-CTP-Hackathon/raw/main/.github/img.png)](https://github.com/bikiris/Obsidian-CTP-Hackathon/raw/main/.github/480p.mov)
 
-
-
-![Image](.github/480p.mov)
 
 ## License:
 This project is licensed under Apache 2.0. See [Liscense](/LICENSE) for more details.
