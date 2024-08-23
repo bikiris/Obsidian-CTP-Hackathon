@@ -3,10 +3,24 @@
 body {
   font-family: 'Poppins', sans-serif;
   /*background-color: #77defa;*/
-  background: linear-gradient(40deg, #0086a2, #05406d);
+  /*background: linear-gradient(40deg, #0086a2, #05406d);*/
+  /*background: linear-gradient(40deg, #78659c, #7d1f67);*/
+  /*
+  
+  (0x77defa + 0x0086a2).toString(16) + " " + (0x77defa + 0x05406d).toString(16)
+  
+  */
+  background: linear-gradient(40deg, #4ebdd4, #0582e1);
+  background-size: 100%;
+  /*position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;*/
+  height: 100vh;
   margin: 0;
-    padding: 0;
-    overflow: hidden !important;
+  padding: 0;
+  overflow: hidden !important;
 }
 
 h1 {
